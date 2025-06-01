@@ -26,7 +26,7 @@ export default function Home() {
       });
       const data = await res.json();
       setMessages(msgs => [...msgs, { role: 'assistant', content: data.response }]);
-    } catch (err) {
+    } catch {
       setMessages(msgs => [...msgs, { role: 'assistant', content: 'Error: Could not get response.' }]);
     }
     setLoading(false);
