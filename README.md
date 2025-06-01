@@ -1,24 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fine-Tuned Mistral Chatbot
 
-## Getting Started
+A chatbot built with Next.js and Mistral AI, using a fine-tuned model.
 
-First, run the development server:
+## Setup
+
+1. Clone the repository:
+   ```bash
+   git clone git@github.com:madihg/mistral-ft-adversarial-grandpa.git
+   cd mistral-ft-adversarial-grandpa
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Create a `.env.local` file with your Mistral API key:
+   ```
+   MISTRAL_API_KEY=your_api_key_here
+   ```
+
+## Local Development
+
+Run the Next.js application:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application will be available at http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment to Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Push your code to GitHub.
+2. Connect your GitHub repository to Vercel.
+3. Add your environment variables in the Vercel dashboard:
+   - `MISTRAL_API_KEY`: Your Mistral API key
+4. Deploy!
+
+## Environment Variables
+
+- `MISTRAL_API_KEY`: Your Mistral AI API key (required)
+
+## Project Structure
+
+- `src/app/api/chat/route.ts`: API route for handling chat requests with the fine-tuned Mistral model.
+- `src/app/page.tsx`: Main chat UI built with Next.js.
+- `src/app/layout.tsx`: Root layout for the Next.js application.
+- `src/app/globals.css`: Global styles.
+- `public/`: Static files (images, icons).
+- `package.json`: Node.js dependencies.
+- `next.config.ts`: Next.js configuration.
+- `tsconfig.json`: TypeScript configuration.
 
 ## Learn More
 
